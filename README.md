@@ -18,6 +18,10 @@
 
 位置：`docs/google_sheet_templates/`
 
+共編連結：
+
+- <https://docs.google.com/spreadsheets/d/1ZbsS51W7eTaWDGcTraRrd0xOx3Bs2fwA/edit?usp=sharing&ouid=105853941157804003114&rtpof=true&sd=true>
+
 - 索引與優先級：`00_欄位模板索引_優先級.csv`
 - 匯入說明：`README_欄位模板.md`
 - 合併後的 Excel：`c4lab_google_sheet_templates.xlsx`

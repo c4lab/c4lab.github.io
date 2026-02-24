@@ -2,6 +2,10 @@
 
 這份資料夾提供可直接匯入 Google Sheets 的空白 CSV 欄位模板。
 
+## 共編連結
+
+- <https://docs.google.com/spreadsheets/d/1ZbsS51W7eTaWDGcTraRrd0xOx3Bs2fwA/edit?usp=sharing&ouid=105853941157804003114&rtpof=true&sd=true>
+
 ## 重要程度標註
 
 - `P0`：上線必備，請優先收齊
