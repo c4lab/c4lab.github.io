@@ -18,16 +18,17 @@ export function ProjectHighlightGrid() {
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {projectHighlights.map((project) => (
-            <Card key={project.id} className="flex h-full flex-col rounded-[1.75rem] border-white/10 bg-white/10 p-6 text-slate-100 shadow-none backdrop-blur-sm">
-              <Tag>{project.tag}</Tag>
-              <h3 className="mt-4 text-2xl text-white">{project.title}</h3>
+            <a
+              key={project.id}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-[1.75rem] bg-white/10 p-6 text-slate-100 backdrop-blur-sm transition hover:bg-white/15"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-sky-300">{project.tag}</span>
+              <h3 className="mt-3 text-2xl text-white">{project.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-7 text-slate-200">{project.blurb}</p>
-              <div className="mt-6">
-                <ExternalLink href={project.href} className="text-sky-200 hover:text-white">
-                  Visit {project.title}
-                </ExternalLink>
-              </div>
-            </Card>
+            </a>
           ))}
         </div>
       </div>
