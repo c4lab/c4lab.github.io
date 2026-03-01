@@ -9,7 +9,7 @@ export function ContactSection() {
         <SectionHeading
           eyebrow="Contact"
           title="Talk to the lab"
-          description="The contact module mirrors the recovered site structure and is isolated for future data-source replacement."
+
         />
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="rounded-[1.5rem] bg-slate-50 p-5">

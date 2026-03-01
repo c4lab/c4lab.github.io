@@ -9,7 +9,7 @@ export function ResearchFocusStrip() {
       <SectionHeading
         eyebrow="Research Themes"
         title="Three research arcs connect foundational methods with translational outcomes."
-        description="The first pass uses structured mock data so each section can later ingest normalized content without changing the layout."
+
       />
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {researchTracks.map((track) => (

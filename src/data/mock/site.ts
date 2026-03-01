@@ -2,10 +2,10 @@ import type { NavItem, SiteContact } from "../../types/content";
 
 export const primaryNav: NavItem[] = [
   { label: "Home", to: "/" },
+  { label: "Blog", to: "/blog" },
   { label: "Research", to: "/research" },
   { label: "Publication", to: "/publication" },
-  { label: "Member", to: "/member" },
-  { label: "Blog", to: "/blog" }
+  { label: "Member", to: "/member" }
 ];
 
 export const utilityNav: NavItem[] = [{ label: "Galaxy", to: "/galaxy", utility: true }];

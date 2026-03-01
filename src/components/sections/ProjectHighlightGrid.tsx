@@ -13,7 +13,7 @@ export function ProjectHighlightGrid() {
         <SectionHeading
           eyebrow="Platforms and Tools"
           title="Selected lab outputs"
-          description="Mock content highlights the modular card system that will later render recovered project links and platform references."
+
           titleClassName="text-white"
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">

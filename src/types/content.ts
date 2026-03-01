@@ -32,7 +32,10 @@ export type PageHeroContent = {
 
 export type HomeHero = PageHeroContent & {
   strapline: string;
-  highlight: string;
+  subtitle?: string;
+  highlight?: string;
+  heroImage?: string;
+  bodyImage?: string;
 };
 
 export type TimelineEntry = {
@@ -40,8 +43,9 @@ export type TimelineEntry = {
   year: string;
   dateLabel: string;
   title: string;
-  summary: string;
-  href: string;
+  summary?: string;
+  href?: string;
+  image?: string;
 };
 
 export type ProjectHighlight = {
