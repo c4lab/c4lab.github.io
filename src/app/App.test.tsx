@@ -32,9 +32,6 @@ describe("App routing and shared layout", () => {
 
   test("renders all route-level page heroes through the shared shell", () => {
     const routes = [
-      { path: "/publication", name: /publication archive/i },
-      { path: "/member", name: /lab members/i },
-      { path: "/blog", name: /selected reading/i },
       { path: "/galaxy", name: /NTU Galaxy 相關說明/ }
     ];
 

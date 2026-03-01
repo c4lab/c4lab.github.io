@@ -34,7 +34,7 @@ export function PageHero({ eyebrow, title, summary, actions, strapline, subtitle
       <div className="page-grid relative">
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-stretch">
           <div className="rounded-[2rem] border border-white/50 bg-white/80 p-8 shadow-glass backdrop-blur-md sm:p-10">
-            <Eyebrow>{eyebrow}</Eyebrow>
+            {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
             <h1 className="mt-4 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
             {strapline ? <p className="mt-4 text-lg font-semibold text-slate-700">{strapline}</p> : null}
             {subtitle ? <h3 className="mt-4 text-xl font-semibold text-primary sm:text-2xl">{subtitle}</h3> : null}

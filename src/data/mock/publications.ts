@@ -1,13 +1,54 @@
 import type { PageHeroContent, PublicationYearGroup } from "../../types/content";
 
 export const publicationHero: PageHeroContent = {
-  eyebrow: "Publication",
+  eyebrow: "",
   title: "Publication Archive",
   summary:
     "A curated, year-grouped archive of papers and talks spanning protein sequence analysis, variant interpretation, immunogenomics, and precision medicine."
 };
 
 export const publicationGroups: PublicationYearGroup[] = [
+  {
+    year: "2025",
+    items: [
+      {
+        id: "pub_072",
+        year: "2025",
+        dateLabel: "14 May 2025",
+        title: "Whole Exome Sequencing-identified Germline Variants Underlie High Familial Risk and Early-onset Colorectal Cancer in Taiwan",
+        venue: "Clinical Gastroenterology and Hepatology",
+        authors: "Yi-Chen Huang*, Yen-Nien Chen*, An-Ko Chung, Yu-An Chen, Pei-Lung Chen, Tang-Long Shen, Chien-Yu Chen, and Han-Mo Chiu",
+        href: "https://www.sciencedirect.com/science/article/pii/S1542356525006603"
+      },
+      {
+        id: "pub_073",
+        year: "2025",
+        dateLabel: "25 Feb 2025",
+        title: "Comparing organophosphate and pyrethroid resistance levels of Aedes aegypti (Diptera: Culicidae) in frequent and infrequent application areas of Taiwan",
+        venue: "Journal of Asia-Pacific Entomology",
+        authors: "Chang-Yu Wu, Shu-Mei Dai, Chin-Gi Huang, Yu-Hsien Chen, Wen-Ting Wang, Chien-Yu Chen, Ju-Chun Hsu*",
+        href: "https://www.sciencedirect.com/science/article/abs/pii/S1226861525000524"
+      },
+      {
+        id: "pub_074",
+        year: "2025",
+        dateLabel: "25 Feb 2025",
+        title: "A large language model framework for literature-based disease–gene association prediction",
+        venue: "Briefings in Bioinformatics",
+        authors: "Peng-Hsuan Li, Yih-Yun Sun, Hsueh-Fen Juan, Chien-Yu Chen, Huai-Kuang Tsai, Jia-Hsin Huang*",
+        href: "https://academic.oup.com/bib/article/26/1/bbaf070/8042066?searchresult=1"
+      },
+      {
+        id: "pub_075",
+        year: "2025",
+        dateLabel: "3 Feb 2025",
+        title: "Annotation-free deep learning for predicting gene mutations from whole slide images of acute myeloid leukemia",
+        venue: "Precision Oncology",
+        authors: "Bo-Han Wei, Xavier Cheng-Hong Tsai, Kuo-Jui Sun, Min-Yen Lo, Sheng-Yu Hung, Wen-Chien Chou, Hwei-Fang Tien, Hsin-An Hou, Chien-Yu Chen*",
+        href: "https://www.nature.com/articles/s41698-025-00804-0"
+      }
+    ]
+  },
   {
     year: "2024",
     items: [
