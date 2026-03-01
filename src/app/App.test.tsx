@@ -32,7 +32,6 @@ describe("App routing and shared layout", () => {
 
   test("renders all route-level page heroes through the shared shell", () => {
     const routes = [
-      { path: "/research", name: /research directions/i },
       { path: "/publication", name: /publication archive/i },
       { path: "/member", name: /lab members/i },
       { path: "/blog", name: /selected reading/i },
@@ -49,18 +48,11 @@ describe("App routing and shared layout", () => {
 });
 
 describe("Interactive modules", () => {
-  test("toggles research detail panels with accessible buttons", async () => {
-    const user = userEvent.setup();
+  test("renders research track sections with detail panels", () => {
     renderApp(["/research"]);
 
-    const button = screen.getByRole("button", {
-      name: /open research content for deep learning for immunogenomics/i
-    });
-
-    expect(screen.queryByText(/HLA, AIRR, and KIR profiling/i)).not.toBeInTheDocument();
-    await user.click(button);
-    expect(screen.getByText(/HLA, AIRR, and KIR profiling/i)).toBeVisible();
-    expect(button).toHaveAttribute("aria-expanded", "true");
+    expect(screen.getByRole("heading", { name: /deep learning for immunogenomics/i })).toBeVisible();
+    expect(screen.getByText(/HLA, AIRR, KIR in immunogenomics/i)).toBeVisible();
   });
 
   test("opens the mobile menu and exposes the galaxy utility route", async () => {
