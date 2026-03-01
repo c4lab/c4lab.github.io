@@ -36,7 +36,7 @@ describe("App routing and shared layout", () => {
       { path: "/publication", name: /publication archive/i },
       { path: "/member", name: /lab members/i },
       { path: "/blog", name: /selected reading/i },
-      { path: "/galaxy", name: /galaxy support/i }
+      { path: "/galaxy", name: /NTU Galaxy 相關說明/ }
     ];
 
     routes.forEach(({ path, name }) => {
@@ -57,9 +57,9 @@ describe("Interactive modules", () => {
       name: /open research content for deep learning for immunogenomics/i
     });
 
-    expect(screen.queryByText(/foundation models for regulatory genomics/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/HLA, AIRR, and KIR profiling/i)).not.toBeInTheDocument();
     await user.click(button);
-    expect(screen.getByText(/foundation models for regulatory genomics/i)).toBeVisible();
+    expect(screen.getByText(/HLA, AIRR, and KIR profiling/i)).toBeVisible();
     expect(button).toHaveAttribute("aria-expanded", "true");
   });
 
@@ -77,9 +77,9 @@ describe("Interactive modules", () => {
   test("marks off-site links with safe external-link attributes", () => {
     renderApp(["/blog"]);
 
-    const externalLink = screen.getByRole("link", {
-      name: /read on medium: ai-driven multi-omics notes/i
-    });
+    const externalLink = screen.getAllByRole("link", {
+      name: /read on medium/i
+    })[0];
 
     expect(externalLink).toHaveAttribute("target", "_blank");
     expect(externalLink).toHaveAttribute("rel", expect.stringContaining("noopener"));
@@ -91,20 +91,20 @@ describe("Dense content pages", () => {
   test("groups publication records by year and preserves long-form citation content", () => {
     renderApp(["/publication"]);
 
-    expect(screen.getByRole("heading", { name: "2025" })).toBeVisible();
     expect(screen.getByRole("heading", { name: "2024" })).toBeVisible();
+    expect(screen.getByRole("heading", { name: "2023" })).toBeVisible();
     expect(
-      screen.getByText(/a cross-scale atlas for taiwanese precision medicine and functional variant reasoning/i)
+      screen.getByText(/Genetic complexity of killer-cell immunoglobulin-like receptor genes/i)
     ).toBeVisible();
-    expect(screen.getByText(/Genome Medicine/i)).toBeVisible();
+    expect(screen.getAllByText(/Genome Research/i)[0]).toBeVisible();
   });
 
   test("renders the featured investigator and member directory sections", () => {
     renderApp(["/member"]);
 
-    expect(screen.getByRole("heading", { name: /prof\. chien-yu chen/i })).toBeVisible();
+    expect(screen.getByRole("heading", { name: /陳倩瑜 Chien-Yu Chen/ })).toBeVisible();
     expect(screen.getByRole("heading", { name: /current researchers/i })).toBeVisible();
     expect(screen.getByRole("heading", { name: /alumni network/i })).toBeVisible();
-    expect(screen.getByText(/phd candidate/i)).toBeVisible();
+    expect(screen.getAllByText(/生機所 碩士/)[0]).toBeVisible();
   });
 });
