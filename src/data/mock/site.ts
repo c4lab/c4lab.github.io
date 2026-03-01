@@ -11,9 +11,9 @@ export const primaryNav: NavItem[] = [
 export const utilityNav: NavItem[] = [{ label: "Galaxy", to: "/galaxy", utility: true }];
 
 export const siteContact: SiteContact = {
-  phone: "+886-2-3366-7118",
+  phone: "+886-2-3366-5334",
   email: "chienyuchen@ntu.edu.tw",
-  contactPerson: "Prof. Chen, Chien-Yu",
+  contactPerson: "陳倩瑜 Prof. Chen, Chien-Yu",
   addressLines: [
     "R304 Department of Biomechatronics",
     "(new building), National Taiwan University"
