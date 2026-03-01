@@ -2,62 +2,81 @@ import type { GalaxySection, GalaxySupportContact, PageHeroContent } from "../..
 
 export const galaxyHero: PageHeroContent = {
   eyebrow: "Galaxy",
-  title: "Galaxy Support",
+  title: "NTU Galaxy 相關說明",
   summary:
-    "Operational guidance for users working with NTU Galaxy resources, including onboarding, data transfer, job monitoring, and support contacts."
+    "NTU Galaxy 使用說明，包含帳號申請、資料上傳、Job 監控、以及支援聯絡方式。"
 };
 
 export const galaxySections: GalaxySection[] = [
   {
     id: "apply",
-    title: "Request Access",
-    summary: "Start with the application flow and confirm the correct institutional account path before submitting jobs.",
+    title: "申請帳號",
+    summary: "透過線上表單申請 NTU Galaxy 帳號。",
     points: [
-      "Use the account application form before requesting compute support.",
-      "Confirm project ownership and storage expectations with the lab.",
-      "Keep the service scope visible for new users."
+      "填寫帳號申請表單後，等待審核通過即可使用。",
+      "確認計畫負責人與儲存空間需求。",
+      "通過後可至 galaxy2.cc.ntu.edu.tw 登入使用。"
     ],
-    links: [{ label: "Open application guide", href: "https://example.org/galaxy/apply", external: true }]
+    links: [
+      {
+        label: "帳號申請表單",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLScbK4zqPezYqW0L2s3_taYlk4oU9Kvb_AI4aIrAQJaNrkrdVA/viewform?usp=sf_link",
+        external: true
+      },
+      {
+        label: "開啟 Galaxy",
+        href: "https://galaxy2.cc.ntu.edu.tw",
+        external: true
+      }
+    ]
   },
   {
     id: "upload",
-    title: "Upload and Organize Data",
-    summary: "Choose the transfer workflow that fits dataset size and turnaround requirements.",
+    title: "上傳資料",
+    summary: "小檔案使用網頁上傳，大檔案使用 FTP。",
     points: [
-      "Use browser upload for small files and FTP for larger datasets.",
-      "Standardize filenames before upload to simplify downstream tracking.",
-      "Stage inputs so re-runs stay reproducible."
+      "小檔案使用網頁上傳，大型資料集使用 FTP 上傳。",
+      "上傳前統一檔案命名，方便後續追蹤。",
+      "建議整理好 input 資料以利重現分析結果。"
     ],
-    links: [{ label: "Read transfer instructions", href: "https://example.org/galaxy/upload", external: true }]
+    links: []
   },
   {
     id: "jobs",
-    title: "Track Jobs and Download Results",
-    summary: "Monitor job state, confirm output naming, and download artifacts using a consistent archive structure.",
+    title: "Job 狀態與下載結果",
+    summary: "監控 job 狀態、確認輸出、下載分析結果。",
     points: [
-      "Check queue status before rerunning long analyses.",
-      "Verify result folders immediately after job completion.",
-      "Download final artifacts with metadata notes for reproducibility."
+      "重新執行長時間分析前，請先確認 queue 狀態。",
+      "右側欄 History 的磁碟圖示可下載結果。",
+      "BWA、Bowtie 等 read-mapping 工具可使用 built-in reference index，若遇到 error 請通知我們下載對應檔案。"
     ],
-    links: [{ label: "Open job-status checklist", href: "https://example.org/galaxy/jobs", external: true }]
+    links: []
   },
   {
     id: "resources",
-    title: "Reference Materials",
-    summary: "Use the tutorial library and package-status notes to avoid unsupported tool paths.",
+    title: "資源與參考資料",
+    summary: "PBS 共 27 個 node，每個 node 有 20-24 CPU 跟 128 GB RAM。",
     points: [
-      "Cross-check package availability before drafting a workflow.",
-      "Use tutorial links for standardized training paths.",
-      "Escalate environment issues early if packages diverge from the expected release set."
+      "開始設計 workflow 前，請先確認所需 package 是否已安裝。",
+      "使用官方 Galaxy Training 教材學習標準分析流程。",
+      "遇到 error 可按 Dataset Error Report，系統會自動寄送診斷資訊給管理員。"
     ],
     links: [
-      { label: "Package status sheet", href: "https://example.org/galaxy/packages", external: true },
-      { label: "Official tutorial", href: "https://example.org/galaxy/tutorial", external: true }
+      {
+        label: "Package 安裝與測試狀態",
+        href: "https://docs.google.com/spreadsheets/d/1APjFZYs30Vh9jEvyhq8Phnlw217jpkPimSlqUFRNuR8/edit#gid=0",
+        external: true
+      },
+      {
+        label: "官方 Galaxy Training",
+        href: "https://training.galaxyproject.org/training-material/",
+        external: true
+      }
     ]
   }
 ];
 
 export const galaxySupport: GalaxySupportContact[] = [
-  { name: "c4Lab Service Desk", email: "chienyuchen@ntu.edu.tw", role: "General support" },
-  { name: "Galaxy Operations", email: "galaxy-support@example.org", role: "Workflow troubleshooting" }
+  { name: "楊文策", email: "d06631002@ntu.edu.tw", role: "NTU c4Lab" },
+  { name: "林弘曄", email: "r08631020@ntu.edu.tw", role: "NTU c4Lab" }
 ];
