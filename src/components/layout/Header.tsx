@@ -15,7 +15,7 @@ export function Header() {
             <Link to="/" className="rounded-full px-2 py-1">
               <span className="font-display text-2xl lowercase text-navy">c4lab</span>
             </Link>
-            <p className="hidden text-sm text-slate-500 lg:block">Computational biology, AI, and precision medicine</p>
+            <p className="hidden text-sm text-slate-500 lg:block">Machine learning and bioinformatics lab</p>
           </div>
 
           <div className="hidden items-center gap-4 lg:flex">
