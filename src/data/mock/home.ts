@@ -10,7 +10,7 @@ export const homeHero: HomeHero = {
   stats: [
     { label: "Founded", value: "2005" },
     { label: "Research tracks", value: "3" },
-    { label: "Publication archive", value: "70+" }
+    { label: "Publication archive", value: "71" }
   ],
   actions: [
     { label: "Explore Research", href: "/research" },
