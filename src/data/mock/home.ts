@@ -8,11 +8,6 @@ export const homeHero: HomeHero = {
   summary:
     "One main interest of c4Lab is to annotate variants and DNA sequences in the human genome. We built machine learning and deep learning models to predict variant pathogenicity, functional regions (e.g. enhancer, TFBS, eQTL, etc) and their sequence effect.\n\nIn c4Lab, we developed computational methods to solve biological problems, including GenEpi, ezGeno, VariantEpi, MHCfovea, and QuantEval.\n\nWe also built the variant database TaiwanGenomes and released TWB PRS models for studying Taiwanese genetic data.",
   heroImage: "/images/hero-bg.png",
-  stats: [
-    { label: "Founded", value: "2005" },
-    { label: "Research tracks", value: "3" },
-    { label: "Publication archive", value: "71" }
-  ],
   actions: [
     { label: "Explore Research", href: "/research" },
     { label: "View Publications", href: "/publication" }

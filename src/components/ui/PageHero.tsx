@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { ButtonLink } from "./ButtonLink";
 import { Eyebrow } from "./Eyebrow";
 
@@ -5,10 +6,6 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   summary: string;
-  stats?: Array<{
-    label: string;
-    value: string;
-  }>;
   actions?: Array<{
     label: string;
     href: string;
@@ -18,9 +15,10 @@ type PageHeroProps = {
   highlight?: string;
   heroImage?: string;
   bodyImage?: string;
+  sidebarExtra?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, summary, stats, actions, strapline, subtitle, highlight, heroImage, bodyImage }: PageHeroProps) {
+export function PageHero({ eyebrow, title, summary, actions, strapline, subtitle, highlight, heroImage, bodyImage, sidebarExtra }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden pt-10 sm:pt-14">
       {heroImage ? (
@@ -34,7 +32,7 @@ export function PageHero({ eyebrow, title, summary, stats, actions, strapline, s
         <div className="absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.16),_transparent_58%)]" />
       )}
       <div className="page-grid relative">
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-stretch">
           <div className="rounded-[2rem] border border-white/50 bg-white/80 p-8 shadow-glass backdrop-blur-md sm:p-10">
             <Eyebrow>{eyebrow}</Eyebrow>
             <h1 className="mt-4 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
@@ -61,22 +59,13 @@ export function PageHero({ eyebrow, title, summary, stats, actions, strapline, s
             ) : null}
           </div>
 
-          <div className="space-y-4">
+          <div className="flex flex-col">
             {bodyImage ? (
               <div className="flex justify-center">
                 <img src={bodyImage} alt="c4Lab illustration" className="w-full max-w-xs rounded-2xl" />
               </div>
             ) : null}
-            {stats?.length ? (
-              <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="glass-panel rounded-[1.75rem] p-6">
-                    <p className="text-sm uppercase tracking-[0.2em] text-slate-500">{stat.label}</p>
-                    <p className="mt-3 font-display text-4xl text-navy">{stat.value}</p>
-                  </div>
-                ))}
-              </div>
-            ) : null}
+            {sidebarExtra ? <div className="flex min-h-0 flex-1">{sidebarExtra}</div> : null}
           </div>
         </div>
       </div>

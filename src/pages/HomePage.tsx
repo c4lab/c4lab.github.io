@@ -1,4 +1,3 @@
-import { ContactSection } from "../components/sections/ContactSection";
 import { HomeHeroSection } from "../components/sections/HomeHeroSection";
 import { ProjectHighlightGrid } from "../components/sections/ProjectHighlightGrid";
 import { ResearchFocusStrip } from "../components/sections/ResearchFocusStrip";
@@ -11,7 +10,6 @@ export function HomePage() {
       <ResearchFocusStrip />
       <ProjectHighlightGrid />
       <TimelinePreviewSection />
-      <ContactSection />
     </>
   );
 }

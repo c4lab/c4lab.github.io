@@ -23,10 +23,6 @@ export type PageHeroContent = {
   eyebrow: string;
   title: string;
   summary: string;
-  stats?: Array<{
-    label: string;
-    value: string;
-  }>;
   actions?: LinkItem[];
 };
 
