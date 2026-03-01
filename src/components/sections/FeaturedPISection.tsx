@@ -1,54 +1,88 @@
+import { useState } from "react";
 import { featuredMember } from "../../data/mock/members";
 import { ExternalLink } from "../ui/ExternalLink";
 import { SectionShell } from "../ui/SectionShell";
+
+function CopyEmail({ email }: { email: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  return (
+    <dd className="flex items-center gap-2">
+      <a href={`mailto:${email}`} className="hover:text-white/80">{email}</a>
+      <button
+        onClick={handleCopy}
+        className="rounded px-1.5 py-0.5 text-xs text-sky-200 transition hover:bg-white/10 hover:text-white"
+        title="Copy email"
+      >
+        {copied ? "Copied!" : "Copy"}
+      </button>
+    </dd>
+  );
+}
 
 export function FeaturedPISection() {
   return (
     <SectionShell className="pt-10 pb-6 sm:pb-6 lg:pb-6">
       <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-navy via-primary to-secondary p-8 text-white lg:p-10">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-sky-100">Featured Investigator</p>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-12">
+          {/* Left column */}
+          <div className="flex-1">
+            {/* Name & role */}
+            <h2 className="text-3xl text-white">{featuredMember.name}</h2>
+            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-sky-100">{featuredMember.role}</p>
+            {featuredMember.bio && <p className="mt-2 text-sm text-sky-100">{featuredMember.bio}</p>}
 
-        <div className="mt-6 flex items-center gap-5">
+            {/* Contact info */}
+            <dl className="mt-6 space-y-3 text-sm text-sky-50">
+              <div>
+                <dt className="font-semibold text-white">E-mail</dt>
+                <CopyEmail email="chienyuchen@ntu.edu.tw" />
+              </div>
+              <div>
+                <dt className="font-semibold text-white">Tel</dt>
+                <dd>02-3366-5335 (系主任辦公室)</dd>
+                <dd>02-3366-5334</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-white">研究主題</dt>
+                <dd>生物資訊、資料探勘、機器學習</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-white">授課領域</dt>
+                <dd>人工智慧概論、資料結構與演算法、生物資訊基石、生醫資料探勘</dd>
+              </div>
+            </dl>
+
+            {/* Photo — mobile only, between info and links */}
+            <img
+              src="/images/prof-chen.png"
+              alt="陳倩瑜 Prof. Chen, Chien-Yu"
+              className="mx-auto my-6 w-52 rounded-full object-cover lg:hidden"
+            />
+
+            {/* Links */}
+            <div className="flex flex-wrap gap-3 lg:mt-6">
+              {featuredMember.links.map((link) => (
+                <ExternalLink key={link.href} href={link.href} className="text-sky-100 hover:text-white">
+                  {link.label}
+                </ExternalLink>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: photo — desktop only */}
           <img
             src="/images/prof-chen.png"
             alt="陳倩瑜 Prof. Chen, Chien-Yu"
-            className="h-20 w-20 rounded-full border-2 border-white/30 object-cover"
+            className="hidden w-72 shrink-0 rounded-full object-cover lg:block"
           />
-          <div>
-            <h2 className="text-3xl text-white">{featuredMember.name}</h2>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-sky-100">{featuredMember.role}</p>
-            <p className="mt-1 text-sm text-sky-100">{featuredMember.bio}</p>
-          </div>
-        </div>
-
-        <div className="mt-8 grid gap-8 lg:grid-cols-2">
-          <dl className="space-y-3 text-sm text-sky-50">
-            <div>
-              <dt className="font-semibold text-white">E-mail</dt>
-              <dd><a href="mailto:chienyuchen@ntu.edu.tw" className="hover:text-white/80">chienyuchen@ntu.edu.tw</a></dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-white">Tel</dt>
-              <dd>02-3366-5335 (系主任辦公室)</dd>
-              <dd>02-3366-5334</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-white">研究主題</dt>
-              <dd>生物資訊、資料探勘、機器學習</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-white">授課領域</dt>
-              <dd>人工智慧概論、資料結構與演算法、生物資訊基石、生醫資料探勘</dd>
-            </div>
-          </dl>
-
-          <div className="flex flex-wrap content-start gap-3">
-            {featuredMember.links.map((link) => (
-              <ExternalLink key={link.href} href={link.href} className="text-sky-100 hover:text-white">
-                {link.label}
-              </ExternalLink>
-            ))}
-          </div>
         </div>
       </div>
     </SectionShell>

@@ -13,7 +13,7 @@ export function Header() {
         <div className="page-grid flex items-center justify-between gap-4 py-4">
           <div className="flex items-center gap-4">
             <Link to="/" className="rounded-full px-2 py-1">
-              <span className="font-display text-2xl lowercase text-navy">c4lab</span>
+              <span className="font-display text-2xl text-navy">c4Lab</span>
             </Link>
             <p className="hidden text-sm text-slate-500 lg:block">Machine learning and bioinformatics lab</p>
           </div>
