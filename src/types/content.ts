@@ -64,6 +64,7 @@ export type ResearchTrack = {
   title: string;
   summary: string;
   mediaLabel: string;
+  image?: string;
   metrics: string[];
   details: ResearchDetailBlock[];
 };
@@ -105,6 +106,7 @@ export type BlogPostCard = {
   title: string;
   author: string;
   summary: string;
+  imageUrl?: string;
   sourceHost: string;
   href: string;
   ctaLabel: string;

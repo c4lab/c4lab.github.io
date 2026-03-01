@@ -1,9 +1,18 @@
 type MediaFrameProps = {
   label: string;
+  image?: string;
   className?: string;
 };
 
-export function MediaFrame({ label, className }: MediaFrameProps) {
+export function MediaFrame({ label, image, className }: MediaFrameProps) {
+  if (image) {
+    return (
+      <div className={`overflow-hidden rounded-[2rem] border border-slate-200 shadow-soft ${className ?? ""}`}>
+        <img src={image} alt={label} className="w-full" />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`relative overflow-hidden rounded-[2rem] border border-white/20 bg-gradient-to-br from-primary via-secondary to-navy p-8 shadow-soft ${className ?? ""}`}
