@@ -13,7 +13,7 @@ export function BlogCardGrid() {
               <img
                 src={post.imageUrl}
                 alt={post.title}
-                className="h-40 w-full object-cover"
+                className="w-full"
                 loading="lazy"
               />
             )}
