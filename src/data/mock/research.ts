@@ -19,19 +19,19 @@ export const researchTracks: ResearchTrack[] = [
     details: [
       {
         id: "seq-1",
-        title: "Modeling variant effect at scale",
-        copy: "Workflows prioritize rare variants and connect pathogenicity reasoning to functional genomic evidence."
+        title: "Variant pathogenicity prediction",
+        copy: "Disease variants from ClinVar, OMIM, and HGMD are classified using ACMG evidence criteria. In silico tools based on evolutionary conservation and protein function assess variant effect, with resampling techniques addressing data imbalance."
       },
       {
         id: "seq-2",
-        title: "Bench-to-model translation",
-        copy: "The lab emphasizes biological plausibility so computational predictions stay useful for downstream validation."
+        title: "Enhancer and regulatory region annotation",
+        copy: "Deep learning models like accuEnhancer learn enhancer activity from H3K27ac signals and genomic sequences, extending from within-cell-type to cross-cell-type prediction of functional regions."
       }
     ]
   },
   {
     id: "immunogenomics",
-    period: "From 2019",
+    period: "From 2021",
     title: "Deep Learning for Immunogenomics",
     summary:
       "We study peptide presentation, immune recognition, and sequence-derived signals that matter for translational immunology.",
@@ -40,19 +40,19 @@ export const researchTracks: ResearchTrack[] = [
     details: [
       {
         id: "imm-1",
-        title: "Foundation models for regulatory genomics",
-        copy: "We adapt modern sequence modeling ideas to immune-related prediction problems while preserving interpretability."
+        title: "HLA, AIRR, and KIR profiling",
+        copy: "Allele typing and effect prediction on complex immunogenomic genes remains challenging. The lab develops AI modules for variation profiling, molecular binding modeling, and response prediction."
       },
       {
         id: "imm-2",
-        title: "Antigen presentation signals",
-        copy: "Research tracks how allele-specific sequence patterns affect binding and downstream clinical decision support."
+        title: "TCR repertoire and pMHC binding",
+        copy: "Deep learning-based encoding of TCR repertoires enables binding prediction between TCR and peptide-MHC complexes, supporting immune response characterization for genomic medicine."
       }
     ]
   },
   {
     id: "multiomics",
-    period: "From 2022",
+    period: "From 2020",
     title: "Outcome Prediction by Integrating Multi-Omics Data",
     summary:
       "The lab integrates genome, transcriptome, epigenome, and proteome signals to support precision medicine and disease-risk reasoning.",
