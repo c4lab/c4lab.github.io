@@ -10,15 +10,13 @@ export const memberHero: PageHeroContent = {
 export const featuredMember: FeaturedMember = {
   name: "陳倩瑜 Chien-Yu Chen",
   role: "教授（系主任）/ Founder of c4Lab",
-  bio: "Professor Chen founded c4Lab at National Taiwan University, focusing on computational genomics, AI for life science, and biologically grounded machine learning methods.",
-  highlights: [
-    "Computational genomics and sequence interpretation",
-    "Deep learning for immunogenomics",
-    "Precision medicine in Taiwanese cohorts"
-  ],
+  bio: "The founder of c4Lab",
+  highlights: [],
   links: [
-    { label: "ORCID Profile", href: "https://orcid.org/", external: true },
-    { label: "Facebook", href: "https://www.facebook.com/chienyu.chen.37", external: true },
+{ label: "Facebook", href: "https://www.facebook.com/chienyu.chen.37", external: true },
+    { label: "YouTube", href: "https://www.youtube.com/@chien-yuchen9796", external: true },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/chien-yu-chen-1bb69725b/", external: true },
+    { label: "Medium", href: "https://medium.com/@chienyuchen_75596", external: true },
     { label: "Contact c4Lab", href: "mailto:chienyuchen@ntu.edu.tw", external: true }
   ]
 };

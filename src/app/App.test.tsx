@@ -93,7 +93,7 @@ describe("Dense content pages", () => {
 
     expect(screen.getByRole("heading", { name: /陳倩瑜 Chien-Yu Chen/ })).toBeVisible();
     expect(screen.getByRole("heading", { name: /current researchers/i })).toBeVisible();
-    expect(screen.getByRole("heading", { name: /alumni network/i })).toBeVisible();
+    expect(screen.getByRole("heading", { name: /alumni/i })).toBeVisible();
     expect(screen.getAllByText(/生機所 碩士/)[0]).toBeVisible();
   });
 });
