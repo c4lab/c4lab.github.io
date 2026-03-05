@@ -26,7 +26,26 @@ jobs:
           cache: npm
 
       - run: npm ci
+      - run: npm test
       - run: npm run build
+      - name: Smoke test preview server
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 &
+          PREVIEW_PID=$!
+          cleanup() {
+            kill "$PREVIEW_PID" >/dev/null 2>&1 || true
+          }
+          trap cleanup EXIT
+
+          for i in {1..20}; do
+            if curl -fsS "http://127.0.0.1:4173/" | grep -qi "<!doctype html>"; then
+              exit 0
+            fi
+            sleep 1
+          done
+
+          echo "Preview smoke check failed"
+          exit 1
 
       - uses: actions/upload-pages-artifact@v3
         with:
