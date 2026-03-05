@@ -77,6 +77,18 @@ describe("Interactive modules", () => {
 });
 
 describe("Dense content pages", () => {
+  test("applies canonical SEO metadata for a non-home route", () => {
+    renderApp(["/research"]);
+
+    expect(document.title).toBe("Research | c4Lab");
+    expect(document.head.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe(
+      "https://c4lab.github.io/research"
+    );
+    expect(document.head.querySelector('meta[property="og:url"]')?.getAttribute("content")).toBe(
+      "https://c4lab.github.io/research"
+    );
+  });
+
   test("groups publication records by year and preserves long-form citation content", () => {
     renderApp(["/publication"]);
 

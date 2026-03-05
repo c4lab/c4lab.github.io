@@ -155,6 +155,7 @@ public/
 
 - 內層 container 只負責 serve 靜態檔，不管 TLS、不管 domain
 - 外層 nginx 負責 `c4lab.tw` / `c4lab.bime.ntu.edu.tw` 的 TLS 和轉發
+- SEO canonical domain 已切換為 `https://c4lab.github.io`（`canonical`、`sitemap.xml`、`robots.txt` 皆以此為準）
 - SPA 路由靠 `try_files $uri $uri/ /index.html` 處理
 
 ### Server 上的操作
