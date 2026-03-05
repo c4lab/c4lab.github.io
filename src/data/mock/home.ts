@@ -7,7 +7,7 @@ export const homeHero: HomeHero = {
   subtitle: "Bringing Machine Intelligence To Life",
   summary:
     "One main interest of c4Lab is to annotate variants and DNA sequences in the human genome. We built machine learning and deep learning models to predict variant pathogenicity, functional regions (e.g. enhancer, TFBS, eQTL, etc) and their sequence effect.\n\nIn c4Lab, we developed computational methods to solve biological problems, including GenEpi, ezGeno, VariantEpi, MHCfovea, and QuantEval.\n\nWe also built the variant database TaiwanGenomes and released TWB PRS models for studying Taiwanese genetic data.",
-  heroImage: "/images/hero-bg.png",
+  heroImage: "/images/hero-bg.webp",
   actions: [
     { label: "Explore Research", href: "/research" },
     { label: "View Publications", href: "/publication" }
@@ -80,7 +80,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Aug 01",
     title: "【人工智慧驅動的多體學分析於精準醫學之應用 AI-Driven Multi-Omics Analysis in Precision Medicine 】Chien-Yu Chen",
     href: "https://www.youtube.com/watch?v=xb0a-R8XF-E",
-    image: "/images/timeline/2024-ai-multiomics.jpg"
+    image: "/images/timeline/2024-ai-multiomics.webp"
   },
   {
     id: "story-2023-01",
@@ -88,7 +88,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Dec 29",
     title: "Complete genomic profiles of 1496 Taiwanese reveal curated medical insights",
     href: "https://www.sciencedirect.com/science/article/pii/S2090123223004058?via%3Dihub",
-    image: "/images/timeline/2023-taiwangenomes.png"
+    image: "/images/timeline/2023-taiwangenomes.webp"
   },
   {
     id: "story-2022-01",
@@ -96,7 +96,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "May 19",
     title: "AI for Life Science and Precision Medicine",
     href: "https://www.youtube.com/watch?v=Ji3I_bvepgQ",
-    image: "/images/timeline/2022-ai-lifescience.png"
+    image: "/images/timeline/2022-ai-lifescience.webp"
   },
   {
     id: "story-2021-01",
@@ -104,7 +104,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Aug 16",
     title: "An AutoML solution for Epigenomics analysis",
     href: "https://academic.oup.com/bioinformatics/article/37/Supplement_1/i408/6319663",
-    image: "/images/timeline/2021-ezgeno.jpeg"
+    image: "/images/timeline/2021-ezgeno.webp"
   },
   {
     id: "story-2020-03",
@@ -112,7 +112,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Dec 09",
     title: "人工智慧在生物資訊的應用︱大安高工",
     href: "https://www.youtube.com/watch?v=uvNpaQhdJl4",
-    image: "/images/timeline/2020-bioinformatics-talk.png"
+    image: "/images/timeline/2020-bioinformatics-talk.webp"
   },
   {
     id: "story-2020-02",
@@ -120,7 +120,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Oct 09",
     title: "DockCoV2: a drug database against SARS-CoV-2",
     href: "https://academic.oup.com/nar/article/49/D1/D1152/5921658",
-    image: "/images/timeline/2020-dockcov2.jpeg"
+    image: "/images/timeline/2020-dockcov2.webp"
   },
   {
     id: "story-2020-01",
@@ -128,7 +128,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Feb 24",
     title: "GenEpi: gene-based epistasis discovery using machine learning",
     href: "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-3368-2",
-    image: "/images/timeline/2020-genepi.png"
+    image: "/images/timeline/2020-genepi.webp"
   },
   {
     id: "story-2019-02",
@@ -136,7 +136,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Jun 05",
     title: "Effect of de novo transcriptome assembly on transcript quantification",
     href: "https://www.nature.com/articles/s41598-019-44499-3",
-    image: "/images/timeline/2019-transcript-assembly.png"
+    image: "/images/timeline/2019-transcript-assembly.webp"
   },
   {
     id: "story-2019-01",
@@ -144,7 +144,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Jan 23",
     title: "用人工智慧探索DNA中的調控密碼 / 陳倩瑜教授",
     href: "https://www.youtube.com/watch?v=OqFbqX7U8dI",
-    image: "/images/timeline/2019-regulatory-code.jpg"
+    image: "/images/timeline/2019-regulatory-code.webp"
   },
   {
     id: "story-2018-01",
@@ -152,7 +152,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "May 02",
     title: "Whole-genome de novo sequencing reveals unique genes that contributed to the adaptive evolution of the Mikado pheasant",
     href: "https://pubmed.ncbi.nlm.nih.gov/29717389/",
-    image: "/images/timeline/2018-mikado-pheasant.jpg"
+    image: "/images/timeline/2018-mikado-pheasant.webp"
   },
   {
     id: "story-2017-02",
@@ -160,7 +160,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "Dec 08",
     title: "[Dosudo] DeepLearning MEET #11 陳倩瑜教授專訪",
     href: "https://www.youtube.com/watch?v=svQY7TmBYks",
-    image: "/images/timeline/2017-dosudo.png"
+    image: "/images/timeline/2017-dosudo.webp"
   },
   {
     id: "story-2017-01",
@@ -168,7 +168,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "May 23",
     title: "當深度學習與生物資訊在個人全基因體註解相遇",
     href: "https://www.youtube.com/watch?v=JwTYvtUTiRM",
-    image: "/images/timeline/2017-deeplearning-bioinformatics.jpg"
+    image: "/images/timeline/2017-deeplearning-bioinformatics.webp"
   },
   {
     id: "story-2016-01",
@@ -204,7 +204,7 @@ export const timelineEntries: TimelineEntry[] = [
     dateLabel: "",
     title: "機器學習的演進與應用 / 陳倩瑜教授",
     href: "https://www.youtube.com/watch?v=I_qCMBfUt_M",
-    image: "/images/timeline/2012-ml-talk.jpg"
+    image: "/images/timeline/2012-ml-talk.webp"
   },
   {
     id: "story-2012-03",
@@ -253,7 +253,7 @@ export const timelineEntries: TimelineEntry[] = [
     year: "2005",
     dateLabel: "",
     title: "c4Lab was founded",
-    image: "/images/timeline/2005-c4lab-founded.png"
+    image: "/images/timeline/2005-c4lab-founded.webp"
   },
   {
     id: "story-2004-01",

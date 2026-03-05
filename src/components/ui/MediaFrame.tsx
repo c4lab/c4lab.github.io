@@ -8,7 +8,7 @@ export function MediaFrame({ label, image, className }: MediaFrameProps) {
   if (image) {
     return (
       <div className={`overflow-hidden rounded-[2rem] border border-slate-200 shadow-soft ${className ?? ""}`}>
-        <img src={image} alt={label} className="w-full" />
+        <img src={image} alt={label} className="w-full" loading="lazy" decoding="async" />
       </div>
     );
   }

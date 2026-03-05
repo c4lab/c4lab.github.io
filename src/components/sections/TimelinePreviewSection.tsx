@@ -3,7 +3,11 @@ import { ExternalLink } from "../ui/ExternalLink";
 import { SectionShell } from "../ui/SectionShell";
 import { SectionHeading } from "../ui/SectionHeading";
 
+const TIMELINE_PREVIEW_COUNT = 8;
+
 export function TimelinePreviewSection() {
+  const previewEntries = timelineEntries.slice(0, TIMELINE_PREVIEW_COUNT);
+
   return (
     <SectionShell>
       <SectionHeading
@@ -11,7 +15,7 @@ export function TimelinePreviewSection() {
         title="Recent highlights from the lab"
       />
       <div className="mt-12 space-y-6">
-        {timelineEntries.map((entry) => (
+        {previewEntries.map((entry) => (
           <article
             key={entry.id}
             className="grid gap-4 rounded-[2rem] border border-slate-200 bg-white/80 p-6 shadow-soft md:grid-cols-[140px_1fr]"
@@ -28,6 +32,8 @@ export function TimelinePreviewSection() {
                   src={entry.image}
                   alt=""
                   className="hidden h-24 w-36 flex-shrink-0 rounded-lg object-cover sm:block"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : null}
               <div className="min-w-0">

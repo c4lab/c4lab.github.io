@@ -22,10 +22,16 @@ export function PageHero({ eyebrow, title, summary, actions, strapline, subtitle
   return (
     <section className="relative overflow-hidden pt-10 sm:pt-14">
       {heroImage ? (
-        <div
-          className="absolute inset-x-0 top-0 h-[28rem] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
+        <div className="absolute inset-x-0 top-0 h-[28rem]">
+          <img
+            src={heroImage}
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover object-center"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-white" />
         </div>
       ) : (
@@ -37,7 +43,7 @@ export function PageHero({ eyebrow, title, summary, actions, strapline, subtitle
             {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
             <h1 className="mt-4 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
             {strapline ? <p className="mt-4 text-lg font-semibold text-slate-700">{strapline}</p> : null}
-            {subtitle ? <h3 className="mt-4 text-xl font-semibold text-primary sm:text-2xl">{subtitle}</h3> : null}
+            {subtitle ? <p className="mt-4 text-xl font-semibold text-primary-strong sm:text-2xl">{subtitle}</p> : null}
             <div className="mt-5 max-w-2xl space-y-4 text-base leading-8 text-slate-600 sm:text-lg">
               {summary.split("\n\n").map((para, i) => (
                 <p key={i}>{para}</p>
@@ -62,7 +68,13 @@ export function PageHero({ eyebrow, title, summary, actions, strapline, subtitle
           <div className="flex flex-col">
             {bodyImage ? (
               <div className="flex justify-center">
-                <img src={bodyImage} alt="c4Lab illustration" className="w-full max-w-xs rounded-2xl" />
+                <img
+                  src={bodyImage}
+                  alt="c4Lab illustration"
+                  className="w-full max-w-xs rounded-2xl"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             ) : null}
             {sidebarExtra ? <div className="flex min-h-0 flex-1">{sidebarExtra}</div> : null}

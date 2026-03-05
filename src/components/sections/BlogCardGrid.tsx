@@ -15,6 +15,7 @@ export function BlogCardGrid() {
                 alt={post.title}
                 className="w-full"
                 loading="lazy"
+                decoding="async"
               />
             )}
             <div className="flex flex-1 flex-col p-6">

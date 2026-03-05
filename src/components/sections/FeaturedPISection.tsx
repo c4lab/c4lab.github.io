@@ -18,7 +18,7 @@ function CopyEmail({ email }: { email: string }) {
       <a href={`mailto:${email}`} className="hover:text-white/80">{email}</a>
       <button
         onClick={handleCopy}
-        className="rounded px-1.5 py-0.5 text-xs text-sky-200 transition hover:bg-white/10 hover:text-white"
+        className="rounded px-1.5 py-0.5 text-xs text-white transition hover:bg-white/10 hover:text-white"
         title="Copy email"
       >
         {copied ? "Copied!" : "Copy"}
@@ -36,11 +36,11 @@ export function FeaturedPISection() {
           <div className="flex-1">
             {/* Name & role */}
             <h2 className="text-3xl text-white">{featuredMember.name}</h2>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-sky-100">{featuredMember.role}</p>
-            {featuredMember.bio && <p className="mt-2 text-sm text-sky-100">{featuredMember.bio}</p>}
+            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-white">{featuredMember.role}</p>
+            {featuredMember.bio && <p className="mt-2 text-sm text-white/90">{featuredMember.bio}</p>}
 
             {/* Contact info */}
-            <dl className="mt-6 space-y-3 text-sm text-sky-50">
+            <dl className="mt-6 space-y-3 text-sm text-white">
               <div>
                 <dt className="font-semibold text-white">E-mail</dt>
                 <CopyEmail email="chienyuchen@ntu.edu.tw" />
@@ -62,15 +62,17 @@ export function FeaturedPISection() {
 
             {/* Photo — mobile only, between info and links */}
             <img
-              src="/images/prof-chen.png"
+              src="/images/prof-chen.webp"
               alt="陳倩瑜 Prof. Chen, Chien-Yu"
               className="mx-auto my-6 w-52 rounded-full object-cover lg:hidden"
+              loading="lazy"
+              decoding="async"
             />
 
             {/* Links */}
             <div className="flex flex-wrap gap-3 lg:mt-6">
               {featuredMember.links.map((link) => (
-                <ExternalLink key={link.href} href={link.href} className="text-sky-100 hover:text-white">
+                <ExternalLink key={link.href} href={link.href} className="text-white hover:text-white/80">
                   {link.label}
                 </ExternalLink>
               ))}
@@ -79,9 +81,11 @@ export function FeaturedPISection() {
 
           {/* Right: photo — desktop only */}
           <img
-            src="/images/prof-chen.png"
+            src="/images/prof-chen.webp"
             alt="陳倩瑜 Prof. Chen, Chien-Yu"
             className="hidden w-72 shrink-0 rounded-full object-cover lg:block"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

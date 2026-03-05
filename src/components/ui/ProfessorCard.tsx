@@ -4,9 +4,11 @@ export function ProfessorCard() {
       <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">Contact Our Professor</p>
       <div className="mt-5 flex items-center gap-5">
         <img
-          src="/images/prof-chen.png"
+          src="/images/prof-chen.webp"
           alt="陳倩瑜 Prof. Chen, Chien-Yu"
           className="h-20 w-20 rounded-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
         <div>
           <p className="text-xl font-semibold text-navy">陳倩瑜</p>

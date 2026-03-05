@@ -14,8 +14,8 @@ const config: Config = {
         navy: "#0F2744"
       },
       fontFamily: {
-        display: ["Crimson Pro", "Georgia", "serif"],
-        sans: ["Atkinson Hyperlegible", "system-ui", "sans-serif"]
+        display: ["Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", "serif"],
+        sans: ["Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"]
       },
       boxShadow: {
         soft: "0 18px 60px rgba(15, 39, 68, 0.08)",

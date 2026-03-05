@@ -34,7 +34,7 @@ export const researchTracks: ResearchTrack[] = [
     summary:
       "Deep Learning for Immunogenomics",
     mediaLabel: "Immunogenomics pipeline",
-    image: "/images/research-immunogenomics.png",
+    image: "/images/research-immunogenomics.webp",
     metrics: ["Peptide binding", "Model interpretation", "Population relevance"],
     details: [
       {
@@ -51,7 +51,7 @@ export const researchTracks: ResearchTrack[] = [
     summary:
       "Outcome Prediction by Integrating Multi-omics Data",
     mediaLabel: "Cross-scale disease modeling",
-    image: "/images/research-outcome.png",
+    image: "/images/research-outcome.webp",
     metrics: ["Multi-omics fusion", "Precision medicine", "Population interpretation"],
     details: [
       {
