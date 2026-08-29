@@ -9,6 +9,29 @@ export const publicationHero: PageHeroContent = {
 
 export const publicationGroups: PublicationYearGroup[] = [
   {
+    year: "2026",
+    items: [
+      {
+        id: "pub_079",
+        year: "2026",
+        dateLabel: "30 Jan 2026",
+        title: "Unmasking human T cell receptor germline diversity: 335 novel alleles identified in 47 Pangenome reference individuals using the gAIRR Suite",
+        venue: "Journal of Advanced Research",
+        authors: "Yu-Hsuan Yang, Chi-Yuan Yao, Mao-Jan Lin, Kuan-Ta Huang, Yu-Hui Lin, Yi-Hui Huang, I-Hsuan Chiu, Sheng-Kai Lai, Chih-Yeh Chen, Ya-Chien Yang, Chia-Lang Hsu, Jacob Shujui Hsu, Chien-Yu Chen, and Pei-Lung Chen*",
+        href: "https://pubmed.ncbi.nlm.nih.gov/41621533/"
+      },
+      {
+        id: "pub_080",
+        year: "2026",
+        dateLabel: "7 Jul 2026",
+        title: "Graph-KIR: graph-based KIR copy number estimation and allele calling using short-read sequencing data",
+        venue: "Bioinformatics",
+        authors: "Hong-Ye Lin, Ting-Jian Wang, Ting-Yu Chang, Hui-Wen Chuang, Tsung-Kai Hung, Ching-Jim Lin, Jacob Shujui Hsu, Chia-Lang Hsu, Ya-Chien Yang, Pei-Lung Chen, Chien-Yu Chen*",
+        href: "https://academic.oup.com/bioinformatics/article/42/7/btag521/8739079"
+      }
+    ]
+  },
+  {
     year: "2025",
     items: [
       {
@@ -46,6 +69,33 @@ export const publicationGroups: PublicationYearGroup[] = [
         venue: "Precision Oncology",
         authors: "Bo-Han Wei, Xavier Cheng-Hong Tsai, Kuo-Jui Sun, Min-Yen Lo, Sheng-Yu Hung, Wen-Chien Chou, Hwei-Fang Tien, Hsin-An Hou, Chien-Yu Chen*",
         href: "https://www.nature.com/articles/s41698-025-00804-0"
+      },
+      {
+        id: "pub_076",
+        year: "2025",
+        dateLabel: "21 Jun 2025",
+        title: "Toward streamline variant classification: discrepancies in variant nomenclature and syntax for ClinVar pathogenic variants across annotation tools",
+        venue: "Human Genomics",
+        authors: "Yu-An Chen, Tzu-Hang Yuan, Jia-Hsin Huang, Yu-Bin Wang, Tzu-Mao Hung, Chien-Yu Chen, Pei-Lung Chen*, and Jacob Shujui Hsu*",
+        href: "https://pubmed.ncbi.nlm.nih.gov/40542397/"
+      },
+      {
+        id: "pub_077",
+        year: "2025",
+        dateLabel: "27 Aug 2025",
+        title: "Evaluating Discordant Somatic Calls Across Mutation Discovery Approaches to Minimize False-Negative Drug-Resistant Findings",
+        venue: "The Journal of Molecular Diagnostics",
+        authors: "Hsin-Fu Lin, Pei-Miao Chien, Chinyi Cheng, Tzu-Hang Yuan, Yu-Bin Wang, Pei-Lung Chen, Chien-Yu Chen, Jia-Hsin Huang, and Jacob Shujui Hsu*",
+        href: "https://pubmed.ncbi.nlm.nih.gov/40517896/"
+      },
+      {
+        id: "pub_078",
+        year: "2025",
+        dateLabel: "21 Nov 2025",
+        title: "Mitochondrial variation in Taiwan Biobank reveals ancestry structure and trait associations",
+        venue: "iScience",
+        authors: "Ting-Hsuan Chou, Pei-Miao Chien, Pin-Xuan Chen, Ni-Chung Lee, Hurng-Yi Wang, Yi-Cheng Chang, Chien-Yu Chen, Pei-Lung Chen, and Jacob Shu-Jui Hsu*",
+        href: "https://www.sciencedirect.com/science/article/pii/S2589004225020073"
       }
     ]
   },
