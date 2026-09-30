@@ -97,7 +97,7 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-10",
     name: "Che-Wei Chang",
-    role: "生機系 學士",
+    role: "生機系 學士 / 研究助理",
     yearLabel: "2024 ~",
     focus: "",
     status: "current"
@@ -113,7 +113,7 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-12",
     name: "Yi-Hsuan Tu",
-    role: "生機系 學士",
+    role: "生機系 學士 / 研究助理",
     yearLabel: "2024 ~",
     focus: "",
     status: "current"
@@ -143,22 +143,6 @@ export const memberRecords: MemberRecord[] = [
     status: "current"
   },
   {
-    id: "member-16",
-    name: "Tung-Pu Lin",
-    role: "生機所 碩士",
-    yearLabel: "2023 ~",
-    focus: "",
-    status: "current"
-  },
-  {
-    id: "member-17",
-    name: "Hsin-En Liu",
-    role: "生機所 碩士",
-    yearLabel: "2023 ~",
-    focus: "",
-    status: "current"
-  },
-  {
     id: "member-18",
     name: "Jun-Liang Chang",
     role: "生機所 碩士 / 生機系 學士",
@@ -177,15 +161,7 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-20",
     name: "Yi-Chen Huang",
-    role: "生機系 學士 / RA",
-    yearLabel: "2022 ~",
-    focus: "",
-    status: "current"
-  },
-  {
-    id: "member-21",
-    name: "Huang-Tien Chiung",
-    role: "生機所 碩士 / 生機系 學士",
+    role: "生機系 學士 / 研究助理",
     yearLabel: "2022 ~",
     focus: "",
     status: "current"
@@ -201,7 +177,7 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-23",
     name: "Zong-Yan Liu",
-    role: "植物所碩士 / RA",
+    role: "植物所碩士 / 研究助理",
     yearLabel: "2021 ~",
     focus: "",
     status: "current"
@@ -250,8 +226,32 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-29",
     name: "Chao-You Sung",
-    role: "",
+    role: "生機所 碩士",
     yearLabel: "2024 - 2026",
+    focus: "",
+    status: "alumni"
+  },
+  {
+    id: "member-16",
+    name: "Tung-Pu Lin",
+    role: "生機所 碩士",
+    yearLabel: "2023 - 2025",
+    focus: "",
+    status: "alumni"
+  },
+  {
+    id: "member-17",
+    name: "Hsin-En Liu",
+    role: "生機所 碩士",
+    yearLabel: "2023 - 2025",
+    focus: "",
+    status: "alumni"
+  },
+  {
+    id: "member-21",
+    name: "Tien-Chiung Huang",
+    role: "生機所 碩士 / 生機系 學士",
+    yearLabel: "2022 - 2025",
     focus: "",
     status: "alumni"
   },
@@ -322,7 +322,7 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-38",
     name: "Hong-Sheng Lai",
-    role: "生機系 學士 / RA",
+    role: "生機系 學士 / 研究助理",
     yearLabel: "2021 - 2024",
     focus: "",
     status: "alumni"
@@ -330,7 +330,7 @@ export const memberRecords: MemberRecord[] = [
   {
     id: "member-39",
     name: "Bo-Han Wei",
-    role: "生機系 學士 / RA",
+    role: "生機系 學士 / 研究助理",
     yearLabel: "2021 - 2024",
     focus: "",
     status: "alumni"
