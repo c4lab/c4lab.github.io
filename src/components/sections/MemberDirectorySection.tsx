@@ -15,6 +15,8 @@ function parseYearRange(yearLabel: string): [number, number] | null {
   if (ongoingMatch) return [Number(ongoingMatch[1]), CURRENT_YEAR];
   const rangeMatch = yearLabel.match(/^(\d{4})\s*-\s*(\d{4})/);
   if (rangeMatch) return [Number(rangeMatch[1]), Number(rangeMatch[2])];
+  const startOnlyMatch = yearLabel.match(/^(\d{4})$/);
+  if (startOnlyMatch) return [Number(startOnlyMatch[1]), Number(startOnlyMatch[1])];
   return null;
 }
 
@@ -24,7 +26,7 @@ function getDegreeCategories(role: string): DegreeCategory[] {
   if (role.includes("博士")) cats.push("博士");
   if (role.includes("碩士")) cats.push("碩士");
   if (role.includes("學士")) cats.push("學士");
-  if (role.includes("RA")) cats.push("研究助理");
+  if (role.includes("RA") || role.includes("研究助理")) cats.push("研究助理");
   return cats;
 }
 

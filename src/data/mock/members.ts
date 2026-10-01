@@ -87,6 +87,14 @@ export const memberRecords: MemberRecord[] = [
     status: "current"
   },
   {
+    id: "member-57",
+    name: "Ting-Ni Li",
+    role: "生機系 學士",
+    yearLabel: "2025 ~",
+    focus: "",
+    status: "current"
+  },
+  {
     id: "member-9",
     name: "Yu-Jui Wang",
     role: "生機系 學士",
@@ -163,22 +171,6 @@ export const memberRecords: MemberRecord[] = [
     name: "Yi-Chen Huang",
     role: "生機系 學士 / 研究助理",
     yearLabel: "2022 ~",
-    focus: "",
-    status: "current"
-  },
-  {
-    id: "member-22",
-    name: "Hung-Sheng Shih",
-    role: "生機所 博士",
-    yearLabel: "2021 ~",
-    focus: "",
-    status: "current"
-  },
-  {
-    id: "member-23",
-    name: "Zong-Yan Liu",
-    role: "植物所碩士 / 研究助理",
-    yearLabel: "2021 ~",
     focus: "",
     status: "current"
   },
@@ -412,6 +404,22 @@ export const memberRecords: MemberRecord[] = [
     name: "Yun-Hsiang Tang",
     role: "生機所 碩士",
     yearLabel: "2018 - 2022",
+    focus: "",
+    status: "alumni"
+  },
+  {
+    id: "member-22",
+    name: "Hung-Sheng Shih",
+    role: "生機所 博士",
+    yearLabel: "2021",
+    focus: "",
+    status: "alumni"
+  },
+  {
+    id: "member-23",
+    name: "Zong-Yan Liu",
+    role: "植物所碩士 / 研究助理",
+    yearLabel: "2021",
     focus: "",
     status: "alumni"
   },
